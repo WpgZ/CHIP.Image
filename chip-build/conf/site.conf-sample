@@ -1,0 +1,22 @@
+PROJ_TOP := "${@os.path.abspath(d.getVar('TOPDIR') + '/DIST')}"
+PROJ_DIST = "${PROJ_TOP}/DIST"
+
+DL_DIR = "${PROJ_DIST}/download"
+SSTATE_DIR = "${PROJ_DIST}/sstate-cache"
+TMPDIR = "${PROJ_DIST}/tmp"
+
+
+#
+# download mirror
+#
+SOURCE_MIRROR_URL ?= "file:///source_mirror/sources/"
+INHERIT += "own-mirrors" 
+BB_GENERATE_MIRROR_TARBALLS = "1" 
+
+
+#
+# sstate cache
+#
+SSTATE_MIRRORS ?= " \
+    file://.* file:///local/mounted/dir/sstate/PATH \
+    "

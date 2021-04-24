@@ -1,15 +1,23 @@
-[submodule "sub-modules/openembedded"]
-	path = submodules/openembedded
-	url = https://git.openembedded.org/meta-openembedded
 [submodule "sub-modules/meta-sunxi"]
 	path = submodules/meta-sunxi
 	url = https://github.com/linux-sunxi/meta-sunxi
-[submodule "sub-modules/openembedded-core"]
-	path = submodules/openembedded-core
-	url = https://git.openembedded.org/openembedded-core
-[submodule "sub-modules/poky"]
+	branch = dunfell
+[submodule "submodules/meta-yachip"]
+	path = submodules/meta-yachip
+	url = git@github.com:winterpgz/meta-yachip.git
+	branch = development/dunfell
+#
+# Disable poky layer
+#
+#[submodule "sub-modules/poky"]
+#    path = submodules/poky
+#    url = https://git.yoctoproject.org/git/poky
+#	branch = dunfell
+[submodule "submodules/poky"]
 	path = submodules/poky
 	url = https://git.yoctoproject.org/git/poky
-[submodule "sub-modules/bitbake"]
-	path = submodules/bitbake
-	url = https://github.com/openembedded/bitbake.git
+	branch = dunfell
+[submodule "submodules/meta-openembedded"]
+	path = submodules/meta-openembedded
+	url = https://github.com/openembedded/meta-openembedded
+	branch = dunfell
